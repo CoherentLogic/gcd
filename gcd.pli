@@ -1,0 +1,17 @@
+main:	procedure options (main);
+
+gcd:	procedure(a, b) returns(fixed decimal);
+
+	declare a fixed decimal;
+	declare b fixed decimal;
+
+	if b = 0 then
+	   return(a);
+	else
+	   return(gcd(b, mod(a, b)));
+
+end gcd;
+
+	put list('GCD of 54 and 24 is ', gcd(54, 24));
+
+end main;	
