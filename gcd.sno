@@ -1,0 +1,21 @@
+	A = 54
+	B = 24
+	RESULT = 0
+
+	N = LT(A, B)		:S(FIXIT)
+
+MAIN
+REPEAT	C = REMDR(A, B)
+	RESULT = EQ(C, 0) B	:S(DONE)
+	A = B
+	B = C			:(REPEAT)
+	
+	
+DONE	OUTPUT = "GCD of 54 and 24 is " RESULT
+	       	      	    	:(END)
+
+FIXIT	C = A
+	A = B
+	B = C			:(MAIN)
+
+END
