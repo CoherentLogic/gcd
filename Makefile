@@ -1,5 +1,5 @@
 
-EXE=gcd-basic gcd-c GCD.class gcd-cobol gcd-fortran gcd-pascal gcd-ada gcd-pli
+EXE=gcd-basic gcd-c GCD.class gcd-cobol gcd-fortran gcd-pascal gcd-ada gcd-pli gcd-go
 
 all: $(EXE)
 
@@ -23,6 +23,9 @@ gcd-pascal: gcd.pas
 
 gcd-ada: gcd-ada.adb
 	gnat make -o gcd-ada gcd-ada.adb
+
+gcd-go: gcd-go.go
+	go build gcd-go.go
 
 gcd-pli: gcd.pli
 	plic -lsiaxgo -ew "-cn(^) -i/usr/local/include" -C gcd.pli -o gcd-pli.o
