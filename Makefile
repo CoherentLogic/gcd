@@ -1,5 +1,5 @@
 
-EXE=gcd-basic gcd-c GCD.class gcd-cobol gcd-fortran gcd-pascal gcd-ada gcd-pli gcd-go
+EXE=gcd-basic gcd-c GCD.class gcd-cobol gcd-fortran gcd-pascal gcd-ada gcd-pli gcd-go gcd-rust
 
 all: $(EXE)
 
@@ -26,6 +26,9 @@ gcd-ada: gcd-ada.adb
 
 gcd-go: gcd-go.go
 	go build gcd-go.go
+
+gcd-rust: gcd-rust.rs
+	rustc gcd-rust.rs
 
 gcd-pli: gcd.pli
 	plic -lsiaxgo -ew "-cn(^) -i/usr/local/include" -C gcd.pli -o gcd-pli.o
