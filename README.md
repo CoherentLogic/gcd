@@ -13,6 +13,7 @@
 * Python 2.x (for Python)
 * Perl 5.x (for Perl)
 * FreeBASIC (for BASIC)
+* Macro SNOBOL4 (for SNOBOL, available at http://www.snobol4.org)
 
 Build on Linux with GNU make
 
